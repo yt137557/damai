@@ -54,7 +54,7 @@ const routes = [
   },
   {
     path: "/login",
-    compoent: () => import("./views/Login/index.vue")
+    component: () => import("./views/Login/index.vue")
   },
   {
     path: "/pay",
