@@ -1,4 +1,3 @@
-// 调用axios封装的请求组件
 export default {
   namespaced: true,
   state: {
