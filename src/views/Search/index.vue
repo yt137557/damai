@@ -1,7 +1,7 @@
 <template>
   <div class="search">
     <form action="/">
-      <van-search placeholder="请输入搜索关键词" show-action shape="round" class="search_inp" />
+      <van-search placeholder="请输入搜索关键词" show-action shape="round" class="search_inp" @cancel="tiaozhuan" />
     </form>
     <div class="search_main">
       <div class="history" v-if="hisList.length>0">
@@ -29,40 +29,36 @@
 <script>
 import "vant/lib/index.css"
 import Search from "../../store/modules/search"
-import { mapActions, mapState, mapMutations } from "vuex"
-
+import { mapActions, mapState} from "vuex"
 export default {
   name: "Search",
-  data() {
-    return {
-      hidden: true
-    }
-  },
   components: {
     Search
   },
   computed: {
-    ...mapState("Search", ["wordList", "hisList"])
+    ...mapState("Search", ["wordList", "hisList"]),
   },
   methods: {
     ...mapActions("Search", ["getWordList"]),
     getHisList(index) {
       let retult = []
       retult += this.$refs.wordlL[index].innerText
-      this.hisList.push(retult)
-      // window.localStorage.setItem("hisList", JSON.stringify(this.hisList))
+      // console.log(this.$refs)
+      this.hisList.unshift(retult)
+      if (this.hisList.length > 10) {
+        // console.log(111)
+        this.hisList.pop()
+      }
+    },
+    tiaozhuan(){
+      this.$router.push({path:'/'});
     }
-    // shanchu() {
-    //   this.hisList = []
-    // }
   },
   created() {
     this.getWordList()
   }
 }
 </script>
-
-
 
 <style lang="scss">
 .search {

@@ -119,5 +119,78 @@
       "price": "￥380-1280",
       "sit": "可选做"
     }
+  ],
+  "ychmx": [
+    {
+      "id": 110,
+      "img1": "https://intercms.damai.cn/artist/bgpic/1535596063165/1535596063165-main.jpg?x-oss-process=image/resize,w_750,/quality,q_50/format,webp",
+      "img2": "https://intercms.damai.cn/artist/pic/1535596053705/1535596053705-main.jpg?x-oss-process=image/quality,q_50/format,webp",
+      "name": "周杰伦",
+      "fensnum": "181.92万"
+    },
+    {
+      "id": 120,
+      "img1": "https://intercms.damai.cn/artist/bgpic/1534413408234/1534413408234.jpg?x-oss-process=image/resize,w_750,/quality,q_50/format,webp",
+      "img2": "https://intercms.damai.cn/artist/pic/1534413408234/1534413408234-main.jpg?x-oss-process=image/quality,q_50/format,webp",
+      "name": "林俊杰",
+      "fensnum": "116.3万"
+    },
+    {
+      "id": 130,
+      "img1": "https://intercms.damai.cn/artist/bgpic/1534413417645/1534413417645.jpg?x-oss-process=image/resize,w_750,/quality,q_50/format,webp",
+      "img2": "https://intercms.damai.cn/artist/pic/1534413417645/1534413417645-main.jpg?x-oss-process=image/quality,q_50/format,webp",
+      "name": "薛之谦",
+      "fensnum": "62.47万"
+    }
+  ],
+  "jslist": [
+    {
+      "id": 110,
+      "week": "周六",
+      "day": "16",
+      "month": "11月",
+      "main": " '浦发运通魔J信用卡'精彩呈献 周杰...",
+      "dizhi": "杭州·黄龙体育中心(体..."
+    },
+    {
+      "id": 110,
+      "week": "周四",
+      "day": "17",
+      "month": "10月",
+      "main": " '浦发运通魔J信用卡'精彩呈献 周杰...",
+      "dizhi": "上海·梅赛德斯-奔驰文..."
+    },
+    {
+      "id": 110,
+      "week": "周六",
+      "day": "26",
+      "month": "10月",
+      "main": " '浦发运通魔J信用卡'精彩呈献 周杰...",
+      "dizhi": "济南·济南奥体中心体"
+    },
+    {
+      "id": 110,
+      "week": "周六",
+      "day": "02",
+      "month": "11月",
+      "main": "周杰伦2019嘉年华世界巡回演唱会 南...",
+      "dizhi": "南京·南京奥体中心体"
+    },
+    {
+      "id": 110,
+      "week": "周六",
+      "day": "09",
+      "month": "11月",
+      "main": "周杰伦2019嘉年华世界巡回演唱会 长...",
+      "dizhi": "长沙·长沙贺龙体育中..."
+    },
+    {
+      "id": 110,
+      "week": "周六",
+      "day": "23",
+      "month": "11月",
+      "main": "周杰伦2019嘉年华世界巡回演唱会 厦...",
+      "dizhi": "厦门·厦门体育中心体..."
+    }
   ]
 }

@@ -11,20 +11,6 @@ export default {
       state.wordList = payload
     }
   },
-  // mutations: {
-  //   // getHisList(state, payload) {
-  //   //   let index = state.wordList.findIndex(item => {
-  //   //     return item.id === payload.id
-  //   //   })
-  //   //   if (index > -1) {
-  //   //     let obj = state.wordList[index]
-  //   //   } else {
-  //   //     let obj = { ...payload }
-  //   //     state.wordList.push(obj)
-  //   //   }
-  //   //   window.localStorage.setItem("words", JSON.stringify(state.wordList))
-  //   // }
-  // },
   actions: {
     getWordList({ commit }) {
       request
