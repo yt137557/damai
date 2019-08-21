@@ -28,7 +28,7 @@ export default {
   }
 }
 </script>
-<style scoped lang='scss'>
+<style  lang='scss'>
 .home-page {
   width: 100%;
   height: 100%;
@@ -67,6 +67,7 @@ export default {
   }
   .content-page {
     flex: 1;
+    overflow: hidden;
     overflow-y: auto;
   }
 }

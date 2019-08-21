@@ -35,6 +35,9 @@ import coming from "./coming"
 import more from "./more"
 import { mapMutations, mapState } from "vuex"
 export default {
+  data() {
+    return {}
+  },
   components: {
     star,
     coming,
@@ -60,12 +63,20 @@ export default {
           el: ".swiper-pagination"
         }
       })
-    },
-    isAll() {}
+    }
+    // fn1() {
+    //   if (this.$el.scrollTop > 1956) {
+    //     this.isfix = true
+    //     console.log(this.$el.scrollTop)
+    //   } else {
+    //     this.isfix = false
+    //   }
+    // }
   },
   mounted() {
     this.getBannerlist()
-    console.log(this.posterPic)
+    console.log(this.$el)
+    // this.$el.addEventListener("scroll", this.fn1)
   },
 
   updated() {
@@ -93,6 +104,7 @@ export default {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-bottom: 10px;
     li {
       img {
         height: 64px;

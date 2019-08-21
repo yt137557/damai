@@ -17,7 +17,6 @@ export default {
         state.logolist = temp.navigationList
         state.nearList = temp.nearByCity
         state.musicList = temp.projectInfo
-        console.log(temp.projectInfo.length)
       })
     }
   }

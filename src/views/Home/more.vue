@@ -1,18 +1,30 @@
 <template>
   <div class="more-content">
-    <ul class="choose">
-      <li>
-        全部分类
-        <i class="iconfont icon-shixi"></i>
-      </li>
-      <li>
-        全部时间
-        <i class="iconfont icon-shixi"></i>
-      </li>
-      <li class="active">推荐排序</li>
-      <li>距离最近</li>
-    </ul>
-
+    <van-sticky :offset-top="100">
+      <van-tabs
+        v-model="active"
+        @disabled="onClickDisabled"
+        type="border:none"
+        title-active-color="#ff1268"
+        @change="fn1"
+      >
+        <van-tab>
+          <div slot="title">
+            全部分类
+            <i class="iconfont icon-shixi"></i>
+          </div>
+        </van-tab>
+        <van-tab title="全部时间">
+          <div slot="title">
+            全部时间
+            <i class="iconfont icon-shixi"></i>
+          </div>
+        </van-tab>
+        <van-tab title="推荐排序"></van-tab>
+        <van-tab title="距离最近" disabled></van-tab>
+      </van-tabs>
+    </van-sticky>
+    <van-popup v-model="show">内容</van-popup>
     <ul class="cont-list">
       <li v-for="item in listA" :key="item.id">
         <img :src="item.verticalPic" />
@@ -26,34 +38,52 @@
   </div>
 </template>
 <script>
+import Vue from "vue"
+import { Tab, Tabs, Sticky, Popup } from "vant"
+
+Vue.use(Tab)
+  .use(Tabs)
+  .use(Sticky)
+  .use(Popup)
 export default {
   props: {
-    listA: Array
-  }
+    listA: Array,
+    fixOne: Boolean
+  },
+  data() {
+    return {
+      active: 2,
+      show: false
+    }
+  },
+  methods: {
+    onClickDisabled(name, title) {
+      this.$toast("请先打开定位服务")
+    },
+    fn1() {
+      this.show = true
+    }
+  },
+  mounted() {}
 }
 </script>
-<style scoped lang='scss'>
+<style  lang='scss'>
 @import "./../../assets/styles/base.scss";
 .more-content {
-  .choose {
-    width: 100%;
-    height: 84px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 30px;
-    color: #111;
-    li {
-      i {
-        color: #ddd;
-        font-size: 12px;
-        vertical-align: middle;
-      }
-      &.active {
-        color: #ff1268;
-      }
-    }
+  // .choose {
+  //   width: 100%;
+  //   // height: 90px;
+  //   display: flex;
+  //   justify-content: space-around;
+  //   align-items: center;
+  //   font-size: 30px;
+  //   color: #111;
+  //
+  // }
+  .van-tabs__nav .van-tab span {
+    line-height: 90px !important;
   }
+
   .cont-list li {
     width: 100%;
     display: flex;
