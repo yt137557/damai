@@ -61,7 +61,7 @@ const routes = [
     component: () => import("./views/Pay/index.vue")
   },
   {
-    path: "/stars",
+    path: "/stars/:goid",
     component: () => import("./views/Stars/index.vue")
   },
 

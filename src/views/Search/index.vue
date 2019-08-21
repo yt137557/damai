@@ -1,9 +1,15 @@
 <template>
   <div class="search">
     <form action="/">
-      <van-search placeholder="请输入搜索关键词" show-action shape="round" class="search_inp" @cancel="tiaozhuan" />
+      <van-search
+        placeholder="请输入搜索关键词"
+        show-action
+        shape="round"
+        class="search_inp"
+        @cancel="tiaozhuan"
+      />
     </form>
-    <div class="search_main">
+    <div class="search_main" v-if="xuanzhong">
       <div class="history" v-if="hisList.length>0">
         <div class="top">
           <span>搜索记录</span>
@@ -11,7 +17,7 @@
         </div>
 
         <ul>
-          <li v-for="item in hisList" :key="item.name">
+          <li v-for="item in hisList" :key="item.name" @click="yincang">
             <router-link to="#">{{item}}</router-link>
           </li>
         </ul>
@@ -23,20 +29,28 @@
         </li>
       </ul>
     </div>
+    <Ych v-else></Ych>
   </div>
 </template>
 
 <script>
 import "vant/lib/index.css"
 import Search from "../../store/modules/search"
-import { mapActions, mapState} from "vuex"
+import { mapActions, mapState } from "vuex"
+import Ych from "../../components/ych"
 export default {
   name: "Search",
+  data() {
+    return {
+      xuanzhong: false
+    }
+  },
   components: {
-    Search
+    Search,
+    Ych
   },
   computed: {
-    ...mapState("Search", ["wordList", "hisList"]),
+    ...mapState("Search", ["wordList", "hisList"])
   },
   methods: {
     ...mapActions("Search", ["getWordList"]),
@@ -50,8 +64,11 @@ export default {
         this.hisList.pop()
       }
     },
-    tiaozhuan(){
-      this.$router.push({path:'/'});
+    tiaozhuan() {
+      this.$router.push({ path: "/" })
+    },
+    yincang() {
+      this.xuanzhong = false
     }
   },
   created() {

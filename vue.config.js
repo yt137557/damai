@@ -5,7 +5,7 @@ module.exports = {
         target: "https://mtop.damai.cn",
         changeOrigin: true,
         pathRewrite: {
-          "^api": ""
+          "^/api": ""
         }
       }
     }
