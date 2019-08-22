@@ -39,6 +39,7 @@
 </template>
 <script src="./index.js"></script>
 <style lang="scss">
+@import '../../assets/styles/base.scss';
 .daBody {
   width: 100%;
   height: 100%;
