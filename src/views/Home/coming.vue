@@ -38,12 +38,11 @@ export default {
       var mySwiper = new Swiper(".swiperTwo", {
         slidesOffsetBefore: 40,
         slidesPerView: 2.3
-        // spaceBetween: 10
       })
     },
     getWeek() {
       let date = new Date()
-      date = date.getDay() + 1
+      date = date.getDay() + 2
       for (let i = date; i < date + 5; i++) {
         let yushu = i % 7
         if (yushu === 1) {
@@ -67,8 +66,11 @@ export default {
   mounted() {
     this.getWeek()
   },
+
   updated() {
-    this.initS()
+    if (this.list.length > 0) {
+      this.initS()
+    }
   }
 }
 </script>
@@ -97,6 +99,7 @@ export default {
     height: 558px;
     img {
       width: 300px;
+      height: 438px;
       border-radius: 6px;
     }
     p {

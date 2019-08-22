@@ -34,11 +34,15 @@
               <h3>周杰伦</h3>
               <p>181.5万粉丝</p>
             </div>
-            <p class="focus">+关注</p>
+            <p class="focus">
+              <i class="iconfont icon-jiahao"></i>关注
+            </p>
           </div>
           <p class="comming">
             最近6场演出
-            <span>></span>
+            <span>
+              <i class="iconfont icon-arrow-right-copy-copy"></i>
+            </span>
           </p>
         </div>
       </div>
@@ -93,7 +97,8 @@ export default {
       justify-content: space-between;
       align-items: center;
       img {
-        width: 100px;
+        width: 120px;
+        height: 120px;
         border-radius: 50%;
       }
       div {
@@ -123,11 +128,11 @@ export default {
     }
   }
   .focus {
-    width: 152px;
+    width: 134px;
     height: 70px;
     line-height: 70px;
     text-align: center;
-    font-size: 32px;
+    font-size: 26px;
     padding: 0 24px;
     border-radius: 44px;
     color: #ff1268;

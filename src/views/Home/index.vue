@@ -1,5 +1,6 @@
 <template>
   <div class="home-page">
+    <!-- 首页的头部bar -->
     <div class="header">
       <router-link :to="'/city'" class="location">
         <van-icon name="location" size="34px" />境外
@@ -18,9 +19,6 @@
 </template>
 
 <script>
-import Vue from "vue"
-import { Icon } from "vant"
-Vue.use(Icon)
 import Content from "./content"
 export default {
   components: {
@@ -37,7 +35,7 @@ export default {
   .header {
     width: 100%;
     display: flex;
-    height: 100px;
+    height: 104px;
     align-items: center;
     box-sizing: border-box;
     padding: 0 16px;
@@ -65,10 +63,10 @@ export default {
     color: #999;
     margin-right: 20px;
   }
-  .content-page {
-    flex: 1;
-    overflow: hidden;
-    overflow-y: auto;
-  }
+}
+.content-page {
+  flex: 1;
+  overflow: hidden;
+  overflow-y: auto;
 }
 </style>

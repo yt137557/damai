@@ -19,5 +19,8 @@ export default {
         state.musicList = temp.projectInfo
       })
     }
+    // getinfo(state,payload){
+
+    // }
   }
 }

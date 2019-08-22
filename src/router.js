@@ -20,29 +20,30 @@ const routes = [
     // }
   },
   {
-    path: "/tickets",
-    component: () => import("./views/Tickets/index.vue"),
-    children: [
-      {
-        path: "child",
-        component: () => import("./views/Tickets/children.vue")
-      },
-      {
-        path: "dance",
-        component: () => import("./views/Tickets/dance.vue")
-      },
-      {
-        path: "musical",
-        component: () => import("./views/Tickets/musical.vue")
-      },
-      {
-        path: "sports",
-        component: () => import("./views/Tickets/sports.vue")
-      }
-    ]
+    path: "/tickets/:goodid",
+    component: () => import("./views/Tickets/index.vue")
+
+    // children: [
+    //   {
+    //     path: "child",
+    //     component: () => import("./views/Tickets/children.vue")
+    //   },
+    //   {
+    //     path: "dance",
+    //     component: () => import("./views/Tickets/dance.vue")
+    //   },
+    //   {
+    //     path: "musical",
+    //     component: () => import("./views/Tickets/musical.vue")
+    //   },
+    //   {
+    //     path: "sports",
+    //     component: () => import("./views/Tickets/sports.vue")
+    //   }
+    // ]
   },
   {
-    path: "/buy",
+    path: "/buy/:showId",
     component: () => import("./views/Buy/index.vue")
     // meta: {
     //   title: "买票"

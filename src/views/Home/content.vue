@@ -2,22 +2,30 @@
   <div class="content-page">
     <div class="swiper-container swiperOne" style="height:282px">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" v-for="item in bannerlist" :key="item.pic">
+        <router-link
+          tag="div"
+          :to="'/buy/'+item.id"
+          class="swiper-slide"
+          v-for="item in bannerlist"
+          :key="item.pic"
+        >
           <img :src="item.pic" />
-        </div>
+        </router-link>
       </div>
-      <div class="swiper-pagination" style="bottom:-250px"></div>
+      <div class="swiper-pagination"></div>
     </div>
 
     <ul class="navigation">
-      <li v-for="item in logolist" :key="item.pic">
+      <router-link :to="'/tickets/'+item.id" tag="li" v-for="item in logolist" :key="item.id">
         <img :src="item.pic" />
         <span>{{item.title}}</span>
-      </li>
+      </router-link>
     </ul>
     <router-link :to="'/posters'" tag="div" class="poster">
-      <img :src="posterPic" />
+      <img :src="posterPic" v-if="posterPic.length>0?true:''" />
+      <van-loading size="24px" v-else vertical>加载中...</van-loading>
     </router-link>
+
     <star></star>
     <coming :list="nearList"></coming>
     <h2>更多演出</h2>
@@ -25,9 +33,9 @@
   </div>
 </template>
 <script>
-import Vue from "vue"
-import { Icon } from "vant"
-Vue.use(Icon)
+// import Vue from "vue"
+// import { Icon, Loading } from "vant"
+// Vue.use(Icon).use(Loading)
 import Swiper from "swiper"
 import "swiper/dist/css/swiper.min.css"
 import star from "./stars"
@@ -57,34 +65,24 @@ export default {
     init() {
       var mySwiper = new Swiper(".swiperOne", {
         loop: true, // 循环模式选项
-        // 如果需要分页器
         autoplay: true,
         pagination: {
           el: ".swiper-pagination"
         }
       })
     }
-    // fn1() {
-    //   if (this.$el.scrollTop > 1956) {
-    //     this.isfix = true
-    //     console.log(this.$el.scrollTop)
-    //   } else {
-    //     this.isfix = false
-    //   }
-    // }
   },
   mounted() {
     this.getBannerlist()
-    console.log(this.$el)
-    // this.$el.addEventListener("scroll", this.fn1)
   },
 
   updated() {
     this.init()
+    // console.log(this.nearList)
   }
 }
 </script>
-<style scoped lang='scss'>
+<style  lang='scss'>
 @import "./../../assets/styles/base.scss";
 .content-page {
   width: 100%;

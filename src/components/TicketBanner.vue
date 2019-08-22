@@ -1,32 +1,8 @@
 <template>
   <div>
-    <!-- <ul class="choose">
-      <li>
-        <van-button type="default" color="#f5f5f5" size="large">
-          境外
-          <i class="iconfont icon-shixi"></i>
-        </van-button>
-      </li>
-      <li>
-        <van-button type="default" color="#f5f5f5" size="large">
-          全部时间
-          <i class="iconfont icon-shixi"></i>
-        </van-button>
-      </li>
-      <li class="active">
-        <van-button type="default" color="#f5f5f5" size="large">
-          <van-dropdown-menu>
-            <van-dropdown-item v-model="value1" :options="option1" />
-          </van-dropdown-menu>
-        </van-button>
-      </li>
-      <li>
-        <van-button type="default" color="#f5f5f5" size="large" @click="fn1">距离最近</van-button>
-      </li>
-    </ul>-->
     <van-dropdown-menu>
       <van-dropdown-item v-model="value" title="境外" />
-      <van-dropdown-item title="全部时间" ref="item">sdjlkjslkajljlsdaljaklslk;;ldjakklsjadljd</van-dropdown-item>
+      <van-dropdown-item title="全部时间" ref="item"></van-dropdown-item>
       <van-dropdown-item v-model="value" title="推荐排序" :options="option" />
       <van-dropdown-item v-model="value" title="距离最近" disabled />
     </van-dropdown-menu>

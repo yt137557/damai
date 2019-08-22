@@ -4,9 +4,25 @@ import router from "./router"
 import store from "./store/index.js"
 import "./assets/styles/base.scss"
 import "./assets/js/base"
-import { Icon } from "vant"
-import "vant/lib/index.css"
+import {
+  Icon,
+  Loading,
+  Tab,
+  Tabs,
+  Sticky,
+  Popup,
+  DropdownMenu,
+  DropdownItem
+} from "vant"
 Vue.use(Icon)
+  .use(Loading)
+  .use(Tab)
+  .use(Tabs)
+  .use(Sticky)
+  .use(Popup)
+  .use(DropdownMenu)
+  .use(DropdownItem)
+import "vant/lib/index.css"
 Vue.config.productionTip = false
 new Vue({
   router,
