@@ -16,12 +16,12 @@
     </div>
     <template v-for="item in data&&data.slice(1)">
       <p class="city-title" :key="item.prefix">{{item.prefix.toUpperCase()}}</p>
-      <div
+      <van-button
         class="address-box-2"
         :key="ele.damaiId"
         v-for="ele in item.cities"
         @click="tijiao"
-      >{{ele.name}}</div>
+      >{{ele.name}}</van-button>
     </template>
   </div>
 </template>
@@ -58,7 +58,10 @@ body {
 }
 .address-box-2 {
   height: 40px;
+  width: 100%;
   line-height: 40px;
   padding-left: 14px;
+  text-align: left;
+  border-top: none;
 }
 </style>
