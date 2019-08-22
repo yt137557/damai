@@ -1,6 +1,12 @@
 <template>
   <div>
-    <router-link :to="'/stars/' + index" class="xq" v-for="(item,index) in mxList" :key="item.id">
+    <router-link
+      :to="'/stars/' + index"
+      class="xq"
+      v-for="(item,index) in mxList"
+      v-if="item.name===dex"
+      :key="item.id"
+    >
       <div class="left">
         <img class="touxiang" :src="item.img" alt />
         <img class="da-v" src="../img/下载.png" alt />
@@ -10,13 +16,13 @@
         <p>{{item.main}}</p>
       </div>
       <span class="jt">></span>
-  </router-link>
-
-    </div>
+    </router-link>
+  </div>
 </template>
 
 <script>
 import request from "../utils/axios"
+import { mapState } from "vuex"
 export default {
   name: "ych",
   data() {
@@ -24,13 +30,16 @@ export default {
       mxList: []
     }
   },
+  computed: {
+    ...mapState("Search", ["hisList", "wordList", "dex"])
+  },
   methods: {
     getmxList() {
       request
         .get("http://localhost:3000/zjl")
         .then(data => {
           this.mxList.push(...data)
-          console.log(data)
+          // console.log(this.mxList[0].name === this.dex)
         })
         .catch(error => {
           console.log(2)
@@ -38,7 +47,7 @@ export default {
     }
   },
   created() {
-    this.getmxList();
+    this.getmxList()
   }
 }
 </script>
@@ -47,7 +56,7 @@ export default {
 .xq {
   padding: 20px;
   overflow: hidden;
-  width: 90%;
+  width: 89%;
   display: flex;
   .left {
     // width: 100%;

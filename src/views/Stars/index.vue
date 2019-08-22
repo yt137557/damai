@@ -1,6 +1,6 @@
 <template>
   <div class="Z-stars">
-    <template v-for="(item,index) in starsList" v-if="index===xxx" >
+    <template v-for="(item,index) in starsList" v-if="index===xxx">
       <div class="star-top">
         <img class="tu1" :src="item.img1" alt />
         <img class="touxiang" :src="item.img2" alt />
@@ -13,7 +13,7 @@
       <div class="fans" :key="item.id">{{item.fensnum}}粉丝</div>
     </template>
 
-    <template v-for="obj in jsList" @click="tz">
+    <template v-for="obj in jsList" v-if="obj.id===xxx" @click="tz">
       <div class="star-buttom">
         <div class="jies">
           <div class="left">
@@ -35,34 +35,31 @@
 </template>
 
 <script>
-import { mapActions, mapState, mapMutations } from "vuex"
+import { mapActions, mapState, mapMutations } from 'vuex'
 export default {
-  name: "Stars",
-  data(){
-    return{
-      ids:Number,
-      xxx:parseInt(this.$route.params.goid)
+  name: 'Stars',
+  data () {
+    return {
+      ids: Number,
+      xxx: parseInt(this.$route.params.goid)
     }
   },
-  components: {
-  },
   methods: {
-    ...mapActions("Stars", ["getStarsList", "getJsList"]),
-    tz() {
-      this.$router.push({ path: "/" })
+    ...mapActions('Stars', ['getStarsList', 'getJsList']),
+    tz () {
+      this.$router.push({ path: '/' })
     },
-    getguanzhu() {
-      this.$router.push({ path: "/login" })
+    getguanzhu () {
+      this.$router.push({ path: '/login' })
     }
   },
   computed: {
-    ...mapState("Stars", ["starsList", "jsList"])
+    ...mapState('Stars', ['starsList', 'jsList'])
   },
-  created() {
-    this.getStarsList();
-    this.getJsList();
-
-  },
+  created () {
+    this.getStarsList()
+    this.getJsList()
+  }
 }
 </script>
 

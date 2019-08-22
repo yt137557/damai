@@ -4,11 +4,22 @@ export default {
   namespaced: true,
   state: {
     wordList: [],
-    hisList: []
+    hisList: [],
+    dex: ""
   },
   mutations: {
     setWordList(state, payload) {
       state.wordList = payload
+    },
+    sethisList(state) {
+      state.hisList = []
+      window.localStorage.setItem("xxx", "")
+    },
+    setindex(state, payload) {
+      state.dex = payload.dex
+    },
+    sethisList1(state, payload) {
+      state.hisList = payload
     }
   },
   actions: {

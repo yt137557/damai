@@ -1,36 +1,35 @@
-import request from "../../utils/axios"
+import request from '../../utils/axios'
 export default {
   namespaced: true,
   state: {
     starsList: [],
-    jsList: []
+    jsList: [],
+    xxb: []
   },
   mutations: {
-    setstarsList(state, payload) {
+    setstarsList (state, payload) {
       state.starsList = payload
     },
-    setJsList(state, payload) {
+    setJsList (state, payload) {
       state.jsList = payload
     }
   },
   actions: {
-    getStarsList({ commit }) {
+    getStarsList ({ commit }) {
       request
-        .get("http://localhost:3000/ychmx")
+        .get('http://localhost:3000/ychmx')
         .then(data => {
-          commit("setstarsList", data)
-          console.log(data)
+          commit('setstarsList', data)
         })
         .catch(error => {
           console.log(2)
         })
     },
-    getJsList({ commit }) {
+    getJsList ({ commit }) {
       request
-        .get("http://localhost:3000/jslist")
+        .get('http://localhost:3000/jslist')
         .then(data => {
-          commit("setJsList", data)
-          console.log(data)
+          commit('setJsList', data)
         })
         .catch(error => {
           console.log(2)

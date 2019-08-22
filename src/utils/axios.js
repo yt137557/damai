@@ -1,7 +1,7 @@
-import axios from "axios"
+import axios from 'axios'
 
 const request = axios.create({
-  baceUrl: "http://localhost:3000/"
+  baceUrl: 'http://localhost:3000/'
 })
 request.interceptors.response.use(
   response => {

@@ -22,16 +22,16 @@
 </template>
 
 <script>
-import Search from "../../store/modules/search"
-import { mapActions, mapState } from "vuex"
+import Search from '../../store/modules/search'
+import { mapActions, mapState } from 'vuex'
 export default {
-  name: "ssbq",
+  name: 'ssbq',
   computed: {
-    ...mapState("Search", ["wordList", "hisList"])
+    ...mapState('Search', ['wordList', 'hisList'])
   },
   methods: {
-    ...mapActions("Search", ["getWordList"]),
-    getHisList(index) {
+    ...mapActions('Search', ['getWordList']),
+    getHisList (index) {
       let retult = []
       retult += this.$refs.wordlL[index].innerText
       // console.log(this.$refs)
@@ -42,12 +42,11 @@ export default {
       }
     }
   },
-  created() {
+  created () {
     this.getWordList()
   }
 }
 </script>
-
 
 <style lang="scss">
 .Z-stars {
