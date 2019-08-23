@@ -16,7 +16,7 @@
     </div>
 
     <ul class="navigation">
-      <router-link :to="'/tickets/'+item.id" tag="li" v-for="item in logolist" :key="item.id">
+      <router-link :to="'/tickets/0'" tag="li" v-for="item in logolist" :key="item.id">
         <img :src="item.pic" />
         <span>{{item.title}}</span>
       </router-link>
@@ -27,9 +27,9 @@
     </router-link>
 
     <star></star>
-    <coming :list="nearList"></coming>
+    <coming :list="nearList" :all="allInfo"></coming>
     <h2>更多演出</h2>
-    <more :listA="musicList"></more>
+    <more :listA="musicList" :all="allInfo"></more>
   </div>
 </template>
 <script>
@@ -57,13 +57,14 @@ export default {
       "logolist",
       "posterPic",
       "nearList",
-      "musicList"
+      "musicList",
+      "allInfo"
     ])
   },
   methods: {
     ...mapMutations("home", ["getBannerlist"]),
     init() {
-      var mySwiper = new Swiper(".swiperOne", {
+      let mySwiper = new Swiper(".swiperOne", {
         loop: true, // 循环模式选项
         autoplay: true,
         pagination: {
@@ -129,4 +130,3 @@ export default {
   }
 }
 </style>
-

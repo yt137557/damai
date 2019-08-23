@@ -12,8 +12,11 @@ import {
   Sticky,
   Popup,
   DropdownMenu,
-  DropdownItem
+  DropdownItem,
+  Button,
+  Dialog
 } from "vant"
+import "vant/lib/index.css"
 Vue.use(Icon)
   .use(Loading)
   .use(Tab)
@@ -22,7 +25,8 @@ Vue.use(Icon)
   .use(Popup)
   .use(DropdownMenu)
   .use(DropdownItem)
-import "vant/lib/index.css"
+  .use(Button)
+  .use(Dialog)
 Vue.config.productionTip = false
 new Vue({
   router,

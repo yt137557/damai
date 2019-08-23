@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import Content from "./content"
+import Content from './content'
 export default {
   components: {
     Content

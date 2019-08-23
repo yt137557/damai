@@ -1,5 +1,5 @@
 {
-  "data": {
+  "ydata": {
     "bannerList": [
       {
         "pic": "https://img.alicdn.com/tfs/TB1RyArdqL7gK0jSZFBXXXZZpXa-751-241.png",
@@ -96,50 +96,6 @@
       }
     ],
     "nearByCity": [
-      {
-        "categoryName": "展览休闲",
-        "cityId": "906",
-        "cityName": "深圳",
-        "distance": 18.7844,
-        "followStatus": 0,
-        "formattedDistance": "18.8km",
-        "formattedPriceStr": "58-2380",
-        "id": 591657882763,
-        "ipvuv": 15815,
-        "isAtmospheric": false,
-        "isEticket": false,
-        "isGeneralAgent": false,
-        "isNewItem": 1,
-        "isSelectSeat": true,
-        "isSnapUp": false,
-        "latitude": 22.547996,
-        "logicAddress": "深圳",
-        "logicLabelInfo": {},
-        "longitude": 114.070404,
-        "name": "深圳.刘老根拿来一壶嗨晚宴剧院",
-        "nearestPerformTime": 1566304200000,
-        "priceLow": "58",
-        "priceStr": "58-2380",
-        "promotionTags": [],
-        "recReasonType": 2,
-        "showStatus": {
-          "desc": "去购票",
-          "id": 0
-        },
-        "showTag": "",
-        "showTime": "2019.08.20-08.28",
-        "siteStatus": 3,
-        "subHead": "",
-        "subTitle": "",
-        "tourProjects": [],
-        "type": "1",
-        "upTime": 1565315232000,
-        "venueCity": "深圳",
-        "venueId": 827014,
-        "venueName": "刘老根拿来一壶嗨晚宴剧院",
-        "verticalPic": "https://img.alicdn.com/bao/uploaded/i2/2251059038/O1CN01DZWvg42GdS9stR8jb_!!0-item_pic.jpg",
-        "videos": []
-      },
       {
         "categoryName": "音乐会",
         "cityId": "947",
@@ -1088,49 +1044,7 @@
         "verticalPic": "https://img.alicdn.com/bao/uploaded/i1/2251059038/O1CN01EGJppP2GdSC75CX2W_!!0-item_pic.jpg",
         "formattedPriceStr": "160"
       },
-      {
-        "promotionTags": [],
-        "logicLabelInfo": {},
-        "siteStatus": 3,
-        "latitude": 31.294295,
-        "isEticket": false,
-        "recReasonType": 2,
-        "videos": [],
-        "cityId": "1087",
-        "type": "1",
-        "categoryName": "体育",
-        "priceLow": "100",
-        "cityName": "苏州",
-        "subTitle": "",
-        "venueId": 1150,
-        "subHead": "",
-        "id": 597564203548,
-        "isSelectSeat": true,
-        "longitude": 120.580352,
-        "venueCity": "苏州",
-        "nearestPerformTime": 1566558000000,
-        "isNewItem": 1,
-        "followStatus": 0,
-        "showTag": "",
-        "showTime": "2019.08.23-08.27",
-        "isSnapUp": false,
-        "showStatus": {
-          "id": 0,
-          "desc": "去购票"
-        },
-        "logicAddress": "苏州",
-        "ipvuv": 54757,
-        "isAtmospheric": false,
-        "isLocal": 1,
-        "venueName": "苏州市体育中心体育馆",
-        "priceStr": "100-500",
-        "upTime": 1561428000000,
-        "isGeneralAgent": true,
-        "tourProjects": [],
-        "name": "2019苏州八国男篮争霸赛暨国际篮球文化周-苏州市体育中心体育馆",
-        "verticalPic": "https://img.alicdn.com/bao/uploaded/i2/2251059038/O1CN01DSNqPm2GdSBL9N817_!!0-item_pic.jpg",
-        "formattedPriceStr": "100-500"
-      },
+
       {
         "promotionTags": [],
         "logicLabelInfo": {},
@@ -1160,7 +1074,7 @@
         "isNewItem": 1,
         "followStatus": 0,
         "showTag": "",
-        "showTime": "2019.12.13 周五 19:30",
+        "showTime": "2019.8.26 周五 19:30",
         "isSnapUp": false,
         "showStatus": {
           "id": 0,
@@ -1250,7 +1164,7 @@
         "isNewItem": 1,
         "followStatus": 0,
         "showTag": "",
-        "showTime": "2019.10.02 周三 20:30",
+        "showTime": "2019.8.26 周三 20:30",
         "isSnapUp": false,
         "showStatus": {
           "id": 0,

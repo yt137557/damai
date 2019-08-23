@@ -9,27 +9,6 @@
   </div>
 </template>
 <script>
-import Vue from "vue"
-import {
-  Tab,
-  Tabs,
-  Sticky,
-  Popup,
-  Button,
-  Toast,
-  Dialog,
-  DropdownMenu,
-  DropdownItem
-} from "vant"
-
-Vue.use(Tab)
-  .use(Tabs)
-  .use(Sticky)
-  .use(Popup)
-  .use(Button)
-  .use(Dialog)
-  .use(DropdownMenu)
-  .use(DropdownItem)
 export default {
   data() {
     return {
@@ -74,4 +53,4 @@ export default {
 //     height: 50px;
 //   }
 //}
-</style>>
+</style>

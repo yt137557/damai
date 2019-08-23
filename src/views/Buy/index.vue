@@ -1,14 +1,14 @@
 <template>
-  <div class="buy-page">
+  <div class="buy-page" :class="{loading:this.stateLoading}">
     <div class="buyHead">
-      <img 
+      <img
           :src="personalInfo&&personalInfo.verticalPic"
 
         />
     </div>
     <div class="buyHeader">
       <div class="insert">
-        <img 
+        <img
           :src="personalInfo&&personalInfo.verticalPic"
         />
           <van-loading size="24px" v-if='showloading' vertical>加载中...</van-loading>
@@ -20,26 +20,26 @@
           </p>
         </div>
       </div>
-    </div>
-
-
-
+    </div> 
 
     <div class="bar-box">
       <p class="bar">
         <span v-for="item in 3" :key="item">
-          <i class="iconfont icon-x"></i>不支持选座
+
+          <i class="iconfont icon-x" ></i>不支持选座
+           <!-- <i class="iconfont icon-gou" v-else></i> -->
         </span>
-      </p>
-      <div class="date-loca">
+    </p>
+  
+    <div class="date-loca">
         <div class="row">
           <p class="time">
            {{personalInfo.showTime}}
             <i class="iconfont icon-arrow-right-copy-copy"></i>
           </p>
           <p>活动时间以现场为主</p>
-        </div>
-        <div class="cor">
+    </div>
+    <div class="cor">
           <div>
             <p class="time">{{personalInfo.logicAddress}}|{{personalInfo.venueName}} </p>
             <p>金田路与滨河大道交叉口西北向</p>
@@ -48,18 +48,16 @@
             <i class="iconfont icon-weizhi"></i>
           </span>
         </div>
-      </div>
-      <p class="bar">
+    </div>
+    <p class="bar">
         <span v-for="item in 3" :key="item">
           <i class="iconfont icon-x"></i>不支持选座
         </span>
-      </p>
+    </p>
     </div>
     <ul class="check-tab">
       <li v-for="item in 3" :key="item">详情</li>
     </ul>
-
-
 
     <div class="detail-info">
       <h2>项目结束</h2>
@@ -71,50 +69,55 @@
         <h4>温馨提示</h4>
         <p>因该项目为境外项目，基于为您提供票务服务所必须，我们可能会将您在购票页面提供的个人信息（姓名、性别、电话、身份证、港澳台通行证或护照号码）中的全部或部分提交给我们位于香港的关联公司大麦娱乐有限公司（"大麦"）及境外项目主办方，用于现场验票、安检及身份确认等。这些信息可能会存储在大麦所在的香港地区和项目所在国家/地区。我们会确保您授权共享的个人信息仅为给您提供票务服务的目的使用，并会与信息接收方签署严格的数据保护协议，要求他们按照适用的法律规定保护您的个人信息。</p>
     </div>
-     <div class='lookmore' @click="showinfo" v-show='showMore'>查看更多</div>
+    <div class='lookmore' @click="showinfo" v-show='showMore'>查看更多</div>
     </div>
-  
   </div>
 </template>
 <script>
-import { mapState,mapMutations } from 'vuex';
+import { mapState, mapMutations } from "vuex"
 export default {
-  data(){
+  data() {
     return {
-      showMore:true,
-      personalInfo:{},
-      showloading:false
+      stateLoading: false,
+      showMore: true,
+      personalInfo: {},
+      showloading: false
     }
   },
-  computed:{
-    ...mapState('home',['musicList'])
+  computed: {
+    ...mapState("home", ["musicList", "nearList", "allInfo"])
   },
-  methods:{
-    ...mapMutations('home',['getBannerlist']),
-    showinfo(){
-      this.showMore=false;
+  methods: {
+    ...mapMutations("home", ["getBannerlist"]),
+    showinfo() {
+      this.stateLoading = true
+      this.showMore = false
     },
-   fn2(){
-     if(this.musicList.length===0){
-       this.showloading=true;
-      }else{
-        this.personalInfo  = this.musicList.find(item=>item.id ==this.$route.params.showId )
-       console.log(this.personalInfo)
-    }  
-   }
+    fn2() {
+      console.log(this.musicList)
+      if (this.allInfo.length === 0) {
+        this.showloading = true
+      } else {
+        this.personalInfo = this.allInfo.find(
+          item => item.id === parseInt(this.$route.params.showId)
+        )
+        console.log(this.personalInfo)
+      }
+    }
   },
-  mounted(){
-  this.getBannerlist();
-  console.log(this.musicList)
-   this.fn2();
-  },
-  updated(){
-
+  mounted() {
+    this.getBannerlist()
+    // this.tempArr=this.musicList.concat(this.nearList);
+    this.fn2()
   }
 }
-</script>>
+</script>
 <style lang='scss'>
-.buy-page{
+.loading {
+  height: 0;
+}
+
+.buy-page {
   position: relative;
 }
 .buyHeader {
@@ -122,26 +125,26 @@ export default {
   box-sizing: border-box;
   padding: 60px 0 0 40px;
   border-bottom: 1px solid #e7e7e7;
-  background: rgba(126, 190, 200,0.2); 
+  background: rgba(126, 190, 200, 0.2);
 }
-.buyHead{
+.buyHead {
   position: absolute;
   top: 0;
   z-index: -1;
   -webkit-filter: blur(5px);
   filter: blur(50px);
   width: 100%;
-  opacity: .9;
-  img{
+  opacity: 0.9;
+  img {
     height: 430px;
-   width: 100%;
+    width: 100%;
   }
-
 }
 .insert {
   height: 320px;
   padding-right: 40px;
   display: flex;
+  color: #fff;
   img {
     width: 230px;
     height: 320px;
@@ -160,7 +163,7 @@ export default {
     font-size: 24px;
   }
   .price-range strong {
-    font-size: 40px;
+    font-size: 34px;
     font-weight: 700;
     color: #ff1268;
   }
@@ -227,18 +230,17 @@ export default {
   margin-top: 20px;
   box-shadow: 0px 10px 20px 0px #eee; /*下边阴影  黄色*/
 }
-.hiddenbox{
+.hiddenbox {
   height: 410px;
   overflow: hidden;
-  
 }
 .detail-info {
   // height: 635px;
   overflow: hidden;
   padding: 0 20px;
   position: relative;
-  opacity: .7;
-  .lookmore{
+  opacity: 0.7;
+  .lookmore {
     position: absolute;
     height: 100px;
     line-height: 100px;
@@ -246,7 +248,7 @@ export default {
     color: #ff2d79;
     font-size: 42px;
     text-align: center;
-    background: rgba(255, 255, 255,0.9 );
+    background: rgba(255, 255, 255, 0.9);
     bottom: 0px;
     left: 0;
   }
@@ -256,17 +258,16 @@ export default {
     font-size: 46px;
     color: #000;
     font-weight: 700;
-   
   }
-  h4{
+  h4 {
     font-weight: 800;
     color: #000;
     font-size: 30px;
     line-height: 40px;
   }
-  p{
+  p {
     line-height: 2;
-        color: #888;
+    color: #888;
     font-size: 24px;
   }
 }

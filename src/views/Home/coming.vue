@@ -8,15 +8,22 @@
       </span>
     </h2>
     <ul class="week">
-      <li v-for="item in week" :key="item.index">{{item}}</li>
+      <li v-for="item in week" :key="item.endDate" @click="getDateInfo(item.endDate)" :class='{active:curLi ===item.endDate}' >{{item.today}}</li>
     </ul>
     <div class="swiper-container swiperTwo">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" v-for="item in list" :key="item.index">
+        <router-link
+        
+          :to="'/buy/'+item.id"
+          tag="div"
+          class="swiper-slide"
+          v-for="item in lista= result ? tempArr : list "
+          :key="item.index"
+        >
           <img :src="item.verticalPic" />
           <p>{{item.venueName}}</p>
           <p class="price">￥{{item.priceLow}}起</p>
-        </div>
+        </router-link>
       </div>
     </div>
   </div>
@@ -26,51 +33,75 @@ import Swiper from "swiper"
 import "swiper/dist/css/swiper.min.css"
 export default {
   props: {
-    list: Array
+    list: Array,
+    all: Array
   },
   data() {
     return {
-      week: ["今天", "明天"]
+      week: [],
+      xingqi: ["周日", "周一", "周二", "周四", "周五", "周六"],
+      tempArr: [],
+      curLi:'2019.8.23'
+    }
+  },
+  computed:{
+    result(){
+      if(this.tempArr.length===0){
+        return false;
+      }else{
+        return true
+      }
     }
   },
   methods: {
     initS() {
-      var mySwiper = new Swiper(".swiperTwo", {
+      let mySwiper = new Swiper(".swiperTwo", {
         slidesOffsetBefore: 40,
         slidesPerView: 2.3
       })
     },
     getWeek() {
+      this.week = []
       let date = new Date()
-      date = date.getDay() + 2
-      for (let i = date; i < date + 5; i++) {
-        let yushu = i % 7
-        if (yushu === 1) {
-          this.week.push("周一")
-        } else if (yushu === 2) {
-          this.week.push("周二")
-        } else if (yushu === 3) {
-          this.week.push("周三")
-        } else if (yushu === 4) {
-          this.week.push("周四")
-        } else if (yushu === 5) {
-          this.week.push("周五")
-        } else if (yushu === 6) {
-          this.week.push("周六")
-        } else if (yushu === 0) {
-          this.week.push("周日")
+      let month = date.getMonth() + 1
+      month = month > 10 ? month : "0" + month
+      let tian = date.getDate() < 10 ? "0" + date.getDate() : date.getDate()
+      let fullDate = `${date.getFullYear()}.${month}.${date.getDate()}`
+      this.week = [
+        { today: "今天", endDate: fullDate },
+        {
+          today: "明天",
+          endDate: `${date.getFullYear()}.${month}.${tian + 1}`
         }
+      ]
+      let obj = {}
+      for (let j = 2; j < 7; j++) {
+        let index = (date.getDay() + j) % 7
+        obj = {
+          today: this.xingqi[index],
+          endDate: `${date.getFullYear()}.${month}.${tian + j}`
+        }
+        this.week.push(obj)
       }
+    },
+    getDateInfo(payload) {
+      this.curLi=payload;
+      this.tempArr = this.all.filter(function(item) {
+        return item.showTime.indexOf(payload) > -1
+      })
     }
+    
   },
   mounted() {
     this.getWeek()
   },
-
   updated() {
     if (this.list.length > 0) {
       this.initS()
-    }
+    }  
+   
+    
+
   }
 }
 </script>
@@ -91,7 +122,7 @@ export default {
     margin: 0 48px 34px;
     color: #999;
     font-size: 30px;
-    > li:first-child {
+    & .active {
       color: #111;
     }
   }

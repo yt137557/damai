@@ -51,6 +51,7 @@
 export default {
   props: {
     listA: Array,
+    all: Array,
     fixOne: Boolean
   },
   data() {

@@ -50,22 +50,18 @@
   </div>
 </template>
 <script>
-import Vue from "vue"
-import Swiper from "swiper"
-import "swiper/dist/css/swiper.min.css"
-
-import { Icon } from "vant"
-Vue.use(Icon)
+import Swiper from 'swiper'
+import 'swiper/dist/css/swiper.min.css'
 export default {
   methods: {
-    swiperThird() {
-      var mySwiper = new Swiper(".swiperThird", {
+    swiperThird () {
+      let mySwiper = new Swiper('.swiperThird', {
         slidesOffsetBefore: 40,
         spaceBetween: 20
       })
     }
   },
-  mounted() {
+  mounted () {
     this.swiperThird()
   }
 }
