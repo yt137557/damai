@@ -1,64 +1,49 @@
 <template>
-  <div class="Z-stars">
-    <template v-for="(item,index) in starsList" v-if="index===xxx">
-      <div class="star-top">
-        <img class="tu1" :src="item.img1" alt />
-        <img class="touxiang" :src="item.img2" alt />
-        <img class="guanzhu" src="../../img/下载 (1).png" @click="getguanzhu" />
+  <div class="search_main">
+    <div class="history" v-if="hisList.length>0">
+      <div class="top">
+        <span>搜索记录</span>
+        <i>X</i>
       </div>
-      <p>
-        <span>{{item.name}}</span>
-        <img class="big-v" src="../../img/下载.png" />
-      </p>
-      <div class="fans" :key="item.id">{{item.fensnum}}粉丝</div>
-    </template>
 
-    <template v-for="obj in jsList" v-if="obj.id===xxx" @click="tz">
-      <div class="star-buttom">
-        <div class="jies">
-          <div class="left">
-            <span class="yt">{{obj.week}}</span>
-            <span>{{obj.day}}</span>
-            <span class="yt">{{obj.month}}</span>
-          </div>
-          <div class="right">
-            <dl>
-              <dt>{{obj.main}}</dt>
-              <dd>{{obj.dizhi}}</dd>
-            </dl>
-          </div>
-        </div>
-      </div>
-    </template>
-    <div class="di"></div>
+      <ul>
+        <li v-for="item in hisList" :key="item.name">
+          <router-link to="#">{{item}}</router-link>
+        </li>
+      </ul>
+    </div>
+    <p>热搜</p>
+    <ul>
+      <li v-for="(item,index) in wordList" :key="item.id" @click="getHisList(index)" ref="wordlL">
+        <router-link to="#">{{item.word}}</router-link>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
-import { mapActions, mapState, mapMutations } from 'vuex'
+import Search from '../../store/modules/search'
+import { mapActions, mapState } from 'vuex'
 export default {
-  name: 'Stars',
-  data () {
-    return {
-      ids: Number,
-      xxx: parseInt(this.$route.params.goid)
-    }
+  name: 'ssbq',
+  computed: {
+    ...mapState('Search', ['wordList', 'hisList'])
   },
   methods: {
-    ...mapActions('Stars', ['getStarsList', 'getJsList']),
-    tz () {
-      this.$router.push({ path: '/' })
-    },
-    getguanzhu () {
-      this.$router.push({ path: '/login' })
+    ...mapActions('Search', ['getWordList']),
+    getHisList (index) {
+      let retult = []
+      retult += this.$refs.wordlL[index].innerText
+      // console.log(this.$refs)
+      this.hisList.unshift(retult)
+      if (this.hisList.length > 10) {
+        // console.log(111)
+        this.hisList.pop()
+      }
     }
   },
-  computed: {
-    ...mapState('Stars', ['starsList', 'jsList'])
-  },
   created () {
-    this.getStarsList()
-    this.getJsList()
+    this.getWordList()
   }
 }
 </script>

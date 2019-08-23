@@ -1,8 +1,7 @@
 import axios from 'axios'
-import { Toast } from 'vant'
+
 const request = axios.create({
-  // 默认配置项
-  baseURL: 'https://localhost:3000'
+  baceUrl: 'http://localhost:3000/'
 })
 
 request.interceptors.response.use(
@@ -10,6 +9,7 @@ request.interceptors.response.use(
     return response
   },
   error => {
+    console.log(1)
     return Promise.reject(error)
   }
 )

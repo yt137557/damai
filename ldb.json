@@ -3266,5 +3266,184 @@
         "formattedPriceStr": "688-888"
       }
     ]
-  }
+  },
+  "data1": [
+    {
+      "id": 0,
+      "action": 1,
+      "reason": "热",
+      "word": "周杰伦"
+    },
+    {
+      "id": 1,
+      "action": 1,
+      "reason": "热",
+      "word": "林俊杰"
+    },
+    {
+      "id": 3,
+      "action": 1,
+      "reason": "热",
+      "word": "薛之谦"
+    },
+    {
+      "id": 4,
+      "action": 1,
+      "reason": "热",
+      "word": "华晨宇"
+    },
+    {
+      "id": 5,
+      "action": 1,
+      "reason": "热",
+      "word": "满舒克"
+    },
+    {
+      "id": 6,
+      "action": 1,
+      "reason": "热",
+      "word": "张惠妹"
+    },
+    {
+      "id": 7,
+      "action": 1,
+      "reason": "热",
+      "word": "李荣浩"
+    },
+    {
+      "id": 8,
+      "action": 1,
+      "reason": "热",
+      "word": "简弘亦"
+    },
+    {
+      "id": 9,
+      "action": 1,
+      "reason": "热",
+      "word": "房东的猫"
+    },
+    {
+      "id": 10,
+      "action": 1,
+      "reason": "热",
+      "word": "GOT7香港"
+    }
+  ],
+  "ychmx": [
+    {
+      "id": 0,
+      "img1": "https://intercms.damai.cn/artist/bgpic/1535596063165/1535596063165-main.jpg?x-oss-process=image/resize,w_750,/quality,q_50/format,webp",
+      "img2": "https://intercms.damai.cn/artist/pic/1535596053705/1535596053705-main.jpg?x-oss-process=image/quality,q_50/format,webp",
+      "name": "周杰伦",
+      "fensnum": "181.92万"
+    },
+    {
+      "id": 1,
+      "img1": "https://intercms.damai.cn/artist/bgpic/1534413408234/1534413408234.jpg?x-oss-process=image/resize,w_750,/quality,q_50/format,webp",
+      "img2": "https://intercms.damai.cn/artist/pic/1534413408234/1534413408234-main.jpg?x-oss-process=image/quality,q_50/format,webp",
+      "name": "林俊杰",
+      "fensnum": "116.3万"
+    },
+    {
+      "id": 2,
+      "img1": "https://intercms.damai.cn/artist/bgpic/1534413417645/1534413417645.jpg?x-oss-process=image/resize,w_750,/quality,q_50/format,webp",
+      "img2": "https://intercms.damai.cn/artist/pic/1534413417645/1534413417645-main.jpg?x-oss-process=image/quality,q_50/format,webp",
+      "name": "薛之谦",
+      "fensnum": "62.47万"
+    }
+  ],
+  "jslist": [
+    {
+      "id": 0,
+      "week": "周六",
+      "day": "16",
+      "month": "11月",
+      "main": " '浦发运通魔J信用卡'精彩呈献 周杰...",
+      "dizhi": "杭州·黄龙体育中心(体..."
+    },
+    {
+      "id": 0,
+      "week": "周四",
+      "day": "17",
+      "month": "10月",
+      "main": " '浦发运通魔J信用卡'精彩呈献 周杰...",
+      "dizhi": "上海·梅赛德斯-奔驰文..."
+    },
+    {
+      "id": 0,
+      "week": "周六",
+      "day": "26",
+      "month": "10月",
+      "main": " '浦发运通魔J信用卡'精彩呈献 周杰...",
+      "dizhi": "济南·济南奥体中心体"
+    },
+    {
+      "id": 0,
+      "week": "周六",
+      "day": "02",
+      "month": "11月",
+      "main": "周杰伦2019嘉年华世界巡回演唱会 南...",
+      "dizhi": "南京·南京奥体中心体"
+    },
+    {
+      "id": 0,
+      "week": "周六",
+      "day": "09",
+      "month": "11月",
+      "main": "周杰伦2019嘉年华世界巡回演唱会 长...",
+      "dizhi": "长沙·长沙贺龙体育中..."
+    },
+    {
+      "id": 0,
+      "week": "周六",
+      "day": "23",
+      "month": "11月",
+      "main": "周杰伦2019嘉年华世界巡回演唱会 厦...",
+      "dizhi": "厦门·厦门体育中心体..."
+    },
+    {
+      "id": 1,
+      "week": "周六",
+      "day": "05",
+      "month": "1月",
+      "main": "JJ林俊杰《圣所2.0》世界巡回演唱会...",
+      "dizhi": "天津·天津奥体中心体..."
+    },
+    {
+      "id": 1,
+      "week": "周六",
+      "day": "26",
+      "month": "10月",
+      "main": "JJ林俊杰《圣所2.0》世界巡回演唱会...",
+      "dizhi": "镇江·镇江体育会展中..."
+    },
+    {
+      "id": 2,
+      "week": "周五",
+      "day": "13",
+      "month": "9月",
+      "main": "2019第七届咪豆音乐节PRO",
+      "dizhi": "南京·南京市溧水区天..."
+    }
+  ],
+  "zjl": [
+    {
+      "id": 0,
+      "img": "https://intercms.damai.cn/artist/pic/1535596053705/1535596053705-main.jpg?x-oss-process=image/quality,q_50/format,webp",
+      "name": "周杰伦",
+      "main": "近期6场演出/183万粉丝"
+    },
+    {
+      "id": 1,
+      "img": "https://intercms.damai.cn/artist/pic/1534413408234/1534413408234-main.jpg?x-oss-process=image/quality,q_50/format,webp",
+      "name": "林俊杰",
+      "main": "近期2场演出/116.5万粉丝"
+    },
+    {
+      "id": 2,
+      "img": "https://intercms.damai.cn/artist/pic/1534413417645/1534413417645-main.jpg?x-oss-process=image/quality,q_50/format,webp",
+      "name": "薛之谦",
+      "main": "近期1场演出/62.6万粉丝"
+    }
+  ]
 }

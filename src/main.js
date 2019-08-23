@@ -12,7 +12,8 @@ import {
   Sticky,
   Popup,
   DropdownMenu,
-  DropdownItem
+  DropdownItem,
+  Search
 } from 'vant'
 import 'vant/lib/index.css'
 window.login = false
@@ -24,6 +25,7 @@ Vue.use(Icon)
   .use(Popup)
   .use(DropdownMenu)
   .use(DropdownItem)
+  .use(Search)
 Vue.config.productionTip = false
 new Vue({
   router,
