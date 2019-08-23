@@ -1,5 +1,10 @@
 {
-  "liu": [],
+  "liu": [
+    {
+      "id": "12121212",
+      "password": "12121212"
+    }
+  ],
   "city": {
     "api": "mtop.damai.wireless.cities.query",
     "data": {
@@ -892,7 +897,9 @@
       ],
       "total": 142
     },
-    "ret": ["SUCCESS::调用成功"],
+    "ret": [
+      "SUCCESS::调用成功"
+    ],
     "v": "1.0"
   },
   "data": {
@@ -1104,7 +1111,9 @@
         "nearestPerformTime": 1566302400000,
         "priceLow": "50",
         "priceStr": "50-880",
-        "promotionTags": ["套票"],
+        "promotionTags": [
+          "套票"
+        ],
         "recReasonType": 2,
         "showStatus": {
           "desc": "去购票",
@@ -1549,7 +1558,9 @@
         "nearestPerformTime": 1566475200000,
         "priceLow": "180",
         "priceStr": "180-1380",
-        "promotionTags": ["套票"],
+        "promotionTags": [
+          "套票"
+        ],
         "recReasonType": 2,
         "showStatus": {
           "desc": "去购票",
@@ -1855,7 +1866,9 @@
         "formattedPriceStr": "388-1288"
       },
       {
-        "promotionTags": ["套票"],
+        "promotionTags": [
+          "套票"
+        ],
         "logicLabelInfo": {},
         "siteStatus": 3,
         "latitude": 31.321332,
