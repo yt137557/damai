@@ -9,30 +9,6 @@
   </div>
 </template>
 <script>
-<<<<<<< HEAD
-=======
-import Vue from 'vue'
-import {
-  Tab,
-  Tabs,
-  Sticky,
-  Popup,
-  Button,
-  Toast,
-  Dialog,
-  DropdownMenu,
-  DropdownItem
-} from 'vant'
-
-Vue.use(Tab)
-  .use(Tabs)
-  .use(Sticky)
-  .use(Popup)
-  .use(Button)
-  .use(Dialog)
-  .use(DropdownMenu)
-  .use(DropdownItem)
->>>>>>> 710e7af81abec4a7b90516a3db144a5fad718f20
 export default {
   data () {
     return {
@@ -53,28 +29,4 @@ export default {
   }
 }
 </script>
-<style lang="scss">
-// .choose {
-//   width: 100%;
-//   height: 80px;
-//   margin-top: 20px;
-//   display: flex;
-//   justify-content: space-around;
-//   align-items: center;
-//   background: #f5f5f5;
 
-//   .van-dropdown-menu__item {
-//     position: absolute;
-//   }
-
-//   .van-button__text {
-//     font-size: 30px;
-//     color: red;
-//   }
-
-//   .active {
-//     width: 122px;
-//     height: 50px;
-//   }
-//}
-</style>

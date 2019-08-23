@@ -52,7 +52,6 @@ export default {
     more
   },
   computed: {
-<<<<<<< HEAD
     ...mapState("home", [
       "bannerlist",
       "logolist",
@@ -66,20 +65,6 @@ export default {
     ...mapMutations("home", ["getBannerlist"]),
     init() {
       let mySwiper = new Swiper(".swiperOne", {
-=======
-    ...mapState('home', [
-      'bannerlist',
-      'logolist',
-      'posterPic',
-      'nearList',
-      'musicList'
-    ])
-  },
-  methods: {
-    ...mapMutations('home', ['getBannerlist']),
-    init () {
-      var mySwiper = new Swiper('.swiperOne', {
->>>>>>> 710e7af81abec4a7b90516a3db144a5fad718f20
         loop: true, // 循环模式选项
         autoplay: true,
         pagination: {

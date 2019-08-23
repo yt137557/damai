@@ -51,7 +51,6 @@ export default {
     TicketBanner
   },
   computed: {
-<<<<<<< HEAD
     ...mapState('home', ['musicList','allInfo'])
   },
   methods: {
@@ -62,13 +61,6 @@ export default {
          console.log(this.datelist)
     },
     fn1 () {
-=======
-    ...mapState('home', ['musicList'])
-  },
-  methods: {
-    ...mapMutations('home', ['getBannerlist']),
-    fn1() {
->>>>>>> 710e7af81abec4a7b90516a3db144a5fad718f20
       console.log(this.$route)
       this.active = parseInt(this.$route.params.goodid)
     }

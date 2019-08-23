@@ -38,7 +38,6 @@ export default {
   },
   data () {
     return {
-<<<<<<< HEAD
       week: [],
       xingqi: ["周日", "周一", "周二", "周四", "周五", "周六"],
       tempArr: [],
@@ -57,19 +56,10 @@ export default {
   methods: {
     initS() {
       let mySwiper = new Swiper(".swiperTwo", {
-=======
-      week: ['今天', '明天']
-    }
-  },
-  methods: {
-    initS () {
-      var mySwiper = new Swiper('.swiperTwo', {
->>>>>>> 710e7af81abec4a7b90516a3db144a5fad718f20
         slidesOffsetBefore: 40,
         slidesPerView: 2.3
       })
     },
-<<<<<<< HEAD
     getWeek() {
       this.week = []
       let date = new Date()
@@ -82,27 +72,6 @@ export default {
         {
           today: "明天",
           endDate: `${date.getFullYear()}.${month}.${tian + 1}`
-=======
-    getWeek () {
-      let date = new Date()
-      date = date.getDay() + 2
-      for (let i = date; i < date + 5; i++) {
-        let yushu = i % 7
-        if (yushu === 1) {
-          this.week.push('周一')
-        } else if (yushu === 2) {
-          this.week.push('周二')
-        } else if (yushu === 3) {
-          this.week.push('周三')
-        } else if (yushu === 4) {
-          this.week.push('周四')
-        } else if (yushu === 5) {
-          this.week.push('周五')
-        } else if (yushu === 6) {
-          this.week.push('周六')
-        } else if (yushu === 0) {
-          this.week.push('周日')
->>>>>>> 710e7af81abec4a7b90516a3db144a5fad718f20
         }
       ]
       let obj = {}
@@ -126,18 +95,10 @@ export default {
   mounted () {
     this.getWeek()
   },
-<<<<<<< HEAD
   updated() {
-=======
-
-  updated () {
->>>>>>> 710e7af81abec4a7b90516a3db144a5fad718f20
     if (this.list.length > 0) {
       this.initS()
     }  
-   
-    
-
   }
 }
 </script>

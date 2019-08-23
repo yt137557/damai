@@ -21,10 +21,7 @@
 
 <script>
 import Content from './content'
-<<<<<<< HEAD
-=======
 import { mapState } from 'vuex'
->>>>>>> 710e7af81abec4a7b90516a3db144a5fad718f20
 export default {
   components: {
     Content

@@ -50,25 +50,12 @@
   </div>
 </template>
 <script>
-<<<<<<< HEAD
 import Swiper from 'swiper'
 import 'swiper/dist/css/swiper.min.css'
 export default {
   methods: {
     swiperThird () {
       let mySwiper = new Swiper('.swiperThird', {
-=======
-import Vue from 'vue'
-import Swiper from 'swiper'
-import 'swiper/dist/css/swiper.min.css'
-
-import { Icon } from 'vant'
-Vue.use(Icon)
-export default {
-  methods: {
-    swiperThird () {
-      var mySwiper = new Swiper('.swiperThird', {
->>>>>>> 710e7af81abec4a7b90516a3db144a5fad718f20
         slidesOffsetBefore: 40,
         spaceBetween: 20
       })

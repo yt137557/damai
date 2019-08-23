@@ -20,11 +20,7 @@
           </p>
         </div>
       </div>
-<<<<<<< HEAD
     </div> 
-=======
-    </div>
->>>>>>> 710e7af81abec4a7b90516a3db144a5fad718f20
 
     <div class="bar-box">
       <p class="bar">
@@ -75,7 +71,6 @@
     </div>
     <div class='lookmore' @click="showinfo" v-show='showMore'>查看更多</div>
     </div>
-<<<<<<< HEAD
   </div>
 </template>
 <script>
@@ -84,23 +79,12 @@ export default {
   data() {
     return {
       stateLoading: false,
-=======
-
-  </div>
-</template>
-<script>
-import { mapState, mapMutations } from 'vuex'
-export default {
-  data () {
-    return {
->>>>>>> 710e7af81abec4a7b90516a3db144a5fad718f20
       showMore: true,
       personalInfo: {},
       showloading: false
     }
   },
   computed: {
-<<<<<<< HEAD
     ...mapState("home", ["musicList", "nearList", "allInfo"])
   },
   methods: {
@@ -125,31 +109,6 @@ export default {
     this.getBannerlist()
     // this.tempArr=this.musicList.concat(this.nearList);
     this.fn2()
-=======
-    ...mapState('home', ['musicList'])
-  },
-  methods: {
-    ...mapMutations('home', ['getBannerlist']),
-    showinfo () {
-      this.showMore = false
-    },
-    fn2 () {
-      if (this.musicList.length === 0) {
-        this.showloading = true
-      } else {
-        this.personalInfo = this.musicList.find(item => item.id == this.$route.params.showId)
-        console.log(this.personalInfo)
-      }
-    }
-  },
-  mounted () {
-    this.getBannerlist()
-    console.log(this.musicList)
-    this.fn2()
-  },
-  updated () {
-
->>>>>>> 710e7af81abec4a7b90516a3db144a5fad718f20
   }
 }
 </script>
@@ -166,11 +125,7 @@ export default {
   box-sizing: border-box;
   padding: 60px 0 0 40px;
   border-bottom: 1px solid #e7e7e7;
-<<<<<<< HEAD
   background: rgba(126, 190, 200, 0.2);
-=======
-  background: rgba(126, 190, 200,0.2);
->>>>>>> 710e7af81abec4a7b90516a3db144a5fad718f20
 }
 .buyHead {
   position: absolute;
@@ -278,10 +233,6 @@ export default {
 .hiddenbox {
   height: 410px;
   overflow: hidden;
-<<<<<<< HEAD
-=======
-
->>>>>>> 710e7af81abec4a7b90516a3db144a5fad718f20
 }
 .detail-info {
   // height: 635px;
@@ -307,10 +258,6 @@ export default {
     font-size: 46px;
     color: #000;
     font-weight: 700;
-<<<<<<< HEAD
-=======
-
->>>>>>> 710e7af81abec4a7b90516a3db144a5fad718f20
   }
   h4 {
     font-weight: 800;

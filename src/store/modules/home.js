@@ -20,7 +20,6 @@ export default {
         state.nearList = temp.nearByCity
         state.musicList = temp.projectInfo
         state.allInfo = state.musicList.concat(temp.nearByCity)
-        // console.log(state.allInfo)
       })
     }
   }
