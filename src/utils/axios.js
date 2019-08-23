@@ -1,11 +1,13 @@
-import axios from "axios"
-
+import axios from 'axios'
+import { Toast } from 'vant'
 const request = axios.create({
-  baceUrl: "https://mtop.damai.cn"
+  // 默认配置项
+  baseURL: 'https://localhost:3000'
 })
+
 request.interceptors.response.use(
   response => {
-    return response.data
+    return response
   },
   error => {
     return Promise.reject(error)

@@ -68,11 +68,11 @@
 .daBody {
   width: 100%;
   height: 100%;
-  padding: 20px;
+  padding: 40px;
   box-sizing: border-box;
 }
 .l-signUp {
-  border-radius: 3px;
+  border-radius: 6px;
 }
 .l-signUp1 {
   color: hsla(0, 0%, 100%, 0.6);
@@ -81,7 +81,7 @@
 }
 .newPop {
   float: right;
-  font-size: 12px;
+  font-size: 24px;
   margin: 0;
   color: #999;
 }

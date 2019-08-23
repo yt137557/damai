@@ -5,10 +5,10 @@ export default {
     isCity: null
   },
   mutations: {
-    getData(state, payload) {
+    getData (state, payload) {
       state.data = payload
     },
-    getCity(state, payload) {
+    getCity (state, payload) {
       state.isCity = payload.city
     }
   }

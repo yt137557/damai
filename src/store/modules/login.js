@@ -5,7 +5,7 @@ export default {
     logining: []
   },
   mutations: {
-    setlogining(state, payload) {
+    setlogining (state, payload) {
       state.logining[0] = payload
       state.login = true
     }

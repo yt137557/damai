@@ -11,7 +11,7 @@ Vue.use(Field)
 
 export default {
   name: 'login',
-  data() {
+  data () {
     return {
       username: '',
       zhanghao: false,
@@ -24,7 +24,7 @@ export default {
   },
   methods: {
     ...mapMutations('login', ['setlogining']),
-    qingqiu() {
+    qingqiu () {
       request
         .get(`http://localhost:3000/liu/${this.username}`)
         .then(res => {
@@ -46,7 +46,7 @@ export default {
           console.log(err)
         })
     },
-    chance() {
+    chance () {
       if (this.username == '' || isNaN(this.username)) {
         this.$toast('账号输入不合规定')
       } else {

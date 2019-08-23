@@ -32,35 +32,35 @@
 @import '../../assets/styles/base.scss';
 html,
 body {
-  font-size: 14px;
+  font-size: 28px;
   color: #666;
 }
 .city-title {
-  height: 30px;
-  line-height: 30px;
+  height: 60px;
+  line-height: 60px;
   background: #f2f3f4;
   box-sizing: border-box;
-  padding-left: 12px;
+  padding-left: 24px;
 }
 .city-address {
   color: #666;
-  height: 30px;
-  line-height: 30px;
+  height: 60px;
+  line-height: 60px;
   width: 30%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   margin-left: 2.5%;
 }
 .address-box {
   box-sizing: border-box;
-  padding: 10px;
+  padding: 20px;
   padding-bottom: 0;
   flex-wrap: wrap;
 }
 .address-box-2 {
-  height: 40px;
+  height: 80px;
   width: 100%;
-  line-height: 40px;
-  padding-left: 14px;
+  line-height: 80px;
+  padding-left: 28px;
   text-align: left;
   border-top: none;
 }

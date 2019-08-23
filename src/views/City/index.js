@@ -30,7 +30,7 @@ export default {
     tijiao(eve) {
       this.getCity({ city: eve.target.innerText })
       console.log(this.isCity)
-      // router.push('/')
+      router.push('/')
     }
   },
   created() {

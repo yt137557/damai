@@ -12,7 +12,7 @@ Vue.use(Field)
 
 export default {
   name: 'sign-up',
-  data() {
+  data () {
     return {
       btnst: false,
       username: '',
@@ -31,38 +31,38 @@ export default {
     }
   },
   methods: {
-    qingqiu() {
+    qingqiu () {
       request
         .post('http://localhost:3000/liu', {
           id: this.username,
           password: this.password2
         })
-        .then(function(res) {
+        .then(function (res) {
           Toast('注册成功')
           location.href = '/#/login'
         })
-        .catch(function(err) {
+        .catch(function (err) {
           Toast('账号已被注册')
         })
     },
-    chance() {
+    chance () {
       if (this.username == '' || isNaN(this.username)) {
         this.$toast('账号输入不合规定')
       } else {
         this.qingqiu()
       }
     },
-    onChange(picker, value, index) {
+    onChange (picker, value, index) {
       Toast(`当前值：${value}, 当前索引：${index}`)
     },
-    onCancel() {
+    onCancel () {
       this.showPicker = false
     },
-    onConfirm(value) {
+    onConfirm (value) {
       this.value = value
       this.onCancel()
     },
-    liang() {
+    liang () {
       if (this.zhanghao === true && this.mima === true) {
         this.btnst = true
       } else {
@@ -70,7 +70,7 @@ export default {
         this.btnst = false
       }
     },
-    check(value) {
+    check (value) {
       if (value.length > 0 && this.password1 === this.password2) {
         if (this.password1.length < 6 || this.password1.length > 18) {
           Toast('密码长度不符合规定')
@@ -85,7 +85,7 @@ export default {
     }
   },
   watch: {
-    username(value) {
+    username (value) {
       if (value.length > 6) {
         this.zhanghao = true
         this.liang()
@@ -94,10 +94,10 @@ export default {
         this.liang()
       }
     },
-    password1(value) {
+    password1 (value) {
       this.check(value)
     },
-    password2(value) {
+    password2 (value) {
       this.check(value)
     }
   }

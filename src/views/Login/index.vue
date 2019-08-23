@@ -43,20 +43,20 @@
 .daBody {
   width: 100%;
   height: 100%;
-  padding: 20px;
+  padding: 40px;
   box-sizing: border-box;
 }
 .login-box {
   display: flex;
-  height: 122px;
+  height: 244px;
   justify-content: center;
   align-items: center;
 }
 .l-signUp {
-  height: 40px;
-  line-height: 40px;
-  margin-top: 5px;
-  border-radius: 3px;
+  height: 80px;
+  line-height: 80px;
+  margin-top: 10px;
+  border-radius: 6px;
   color: hsla(0, 0%, 100%, 0.6);
   background-image: linear-gradient(90deg, #ff4aae, #ff1268);
   background-color: #ff1268;
@@ -64,7 +64,7 @@
 }
 .newPop {
   float: right;
-  font-size: 12px;
+  font-size: 24px;
   margin: 0;
   color: #999;
 }
