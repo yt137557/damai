@@ -60,32 +60,32 @@ export default {
       show: false,
       value1: 1,
       option1: [
-        { text: "全部", value: 0 },
-        { text: "演唱会", value: 1 },
-        { text: "话剧歌剧", value: 2 },
-        { text: " 音乐会", value: 3 },
-        { text: "曲苑杂坛", value: 4 },
-        { text: "舞蹈芭蕾", value: 5 },
-        { text: "体育比赛", value: 6 },
-        { text: " 儿童亲子", value: 7 },
-        { text: "展览休闲", value: 8 },
-        { text: "二次元", value: 9 },
-        { text: "旅游展览", value: 10 }
+        { text: '全部', value: 0 },
+        { text: '演唱会', value: 1 },
+        { text: '话剧歌剧', value: 2 },
+        { text: ' 音乐会', value: 3 },
+        { text: '曲苑杂坛', value: 4 },
+        { text: '舞蹈芭蕾', value: 5 },
+        { text: '体育比赛', value: 6 },
+        { text: ' 儿童亲子', value: 7 },
+        { text: '展览休闲', value: 8 },
+        { text: '二次元', value: 9 },
+        { text: '旅游展览', value: 10 }
       ],
       value: 0,
       option: [
-        { text: "全部时间", value: 0 },
-        { text: "今天", value: 1 },
-        { text: "明天", value: 2 },
-        { text: "本周末", value: 3 },
-        { text: "一周内", value: 4 },
-        { text: "一月内", value: 5 }
+        { text: '全部时间', value: 0 },
+        { text: '今天', value: 1 },
+        { text: '明天', value: 2 },
+        { text: '本周末', value: 3 },
+        { text: '一周内', value: 4 },
+        { text: '一月内', value: 5 }
       ]
     }
   },
   methods: {
     onClickDisabled(name, title) {
-      this.$toast("请先打开定位服务")
+      this.$toast('请先打开定位服务')
     },
     getBox() {
       this.show = true
@@ -98,7 +98,7 @@ export default {
 }
 </script>
 <style  lang='scss'>
-@import "./../../assets/styles/base.scss";
+@import './../../assets/styles/base.scss';
 .more-content {
   .van-dropdown-menu {
     height: 80px;

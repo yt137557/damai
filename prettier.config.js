@@ -1,3 +1,5 @@
 module.exports = {
-  semi: false
+  semi: false,
+  singleQuote: true,
+  'space-before-function-paren': ['error', 'ignore']
 }

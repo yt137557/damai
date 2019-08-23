@@ -36,14 +36,14 @@
 // import Vue from "vue"
 // import { Icon, Loading } from "vant"
 // Vue.use(Icon).use(Loading)
-import Swiper from "swiper"
-import "swiper/dist/css/swiper.min.css"
-import star from "./stars"
-import coming from "./coming"
-import more from "./more"
-import { mapMutations, mapState } from "vuex"
+import Swiper from 'swiper'
+import 'swiper/dist/css/swiper.min.css'
+import star from './stars'
+import coming from './coming'
+import more from './more'
+import { mapMutations, mapState } from 'vuex'
 export default {
-  data() {
+  data () {
     return {}
   },
   components: {
@@ -52,6 +52,7 @@ export default {
     more
   },
   computed: {
+<<<<<<< HEAD
     ...mapState("home", [
       "bannerlist",
       "logolist",
@@ -65,19 +66,33 @@ export default {
     ...mapMutations("home", ["getBannerlist"]),
     init() {
       let mySwiper = new Swiper(".swiperOne", {
+=======
+    ...mapState('home', [
+      'bannerlist',
+      'logolist',
+      'posterPic',
+      'nearList',
+      'musicList'
+    ])
+  },
+  methods: {
+    ...mapMutations('home', ['getBannerlist']),
+    init () {
+      var mySwiper = new Swiper('.swiperOne', {
+>>>>>>> 710e7af81abec4a7b90516a3db144a5fad718f20
         loop: true, // 循环模式选项
         autoplay: true,
         pagination: {
-          el: ".swiper-pagination"
+          el: '.swiper-pagination'
         }
       })
     }
   },
-  mounted() {
+  mounted () {
     this.getBannerlist()
   },
 
-  updated() {
+  updated () {
     this.init()
     // console.log(this.nearList)
   }

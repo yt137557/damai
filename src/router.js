@@ -9,7 +9,7 @@ const routes = [
     path: '/',
     component: () => import('./views/Home/index.vue')
     // meta: {
-    //   title: "首页"
+    //   title: '首页'
     // }
   },
   {
@@ -20,6 +20,7 @@ const routes = [
     // }
   },
   {
+<<<<<<< HEAD
     path: '/tickets/:goodid',
     component: () => import('./views/Tickets/index.vue')
 
@@ -44,6 +45,31 @@ const routes = [
   },
   {
     path: '/buy/:showId',
+=======
+    path: '/tickets',
+    component: () => import('./views/Tickets/index.vue'),
+    children: [
+      {
+        path: 'child',
+        component: () => import('./views/Tickets/children.vue')
+      },
+      {
+        path: 'dance',
+        component: () => import('./views/Tickets/dance.vue')
+      },
+      {
+        path: 'musical',
+        component: () => import('./views/Tickets/musical.vue')
+      },
+      {
+        path: 'sports',
+        component: () => import('./views/Tickets/sports.vue')
+      }
+    ]
+  },
+  {
+    path: '/buy',
+>>>>>>> 710e7af81abec4a7b90516a3db144a5fad718f20
     component: () => import('./views/Buy/index.vue')
     // meta: {
     //   title: "买票"
@@ -69,6 +95,7 @@ const routes = [
   {
     path: '/search',
     component: () => import('./views/Search/index.vue')
+<<<<<<< HEAD
   },
   {
     path: '/posters',
@@ -77,10 +104,37 @@ const routes = [
   {
     path: '/sign-up',
     component: () => import('./views/Sign/index.vue')
+=======
+  },
+  {
+    path: '/posters',
+    component: () => import('./views/Posters/index.vue')
+  },
+  {
+    path: '/sign-up',
+    component: () => import('./views/Sign/index.vue')
+  },
+  {
+    path: '*',
+    redirect: '/'
+>>>>>>> 710e7af81abec4a7b90516a3db144a5fad718f20
   }
 ]
 // })
 const router = new Router({
   routes
+})
+
+// 全局前置路由
+router.beforeEach((to, from, next) => {
+  if (to.meta.needLogin) {
+    if (window.login) {
+      next()
+    } else {
+      next(`/login?redirect=${to.path}`)
+    }
+  } else {
+    next()
+  }
 })
 export default router

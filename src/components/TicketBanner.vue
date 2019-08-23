@@ -9,22 +9,46 @@
   </div>
 </template>
 <script>
+<<<<<<< HEAD
+=======
+import Vue from 'vue'
+import {
+  Tab,
+  Tabs,
+  Sticky,
+  Popup,
+  Button,
+  Toast,
+  Dialog,
+  DropdownMenu,
+  DropdownItem
+} from 'vant'
+
+Vue.use(Tab)
+  .use(Tabs)
+  .use(Sticky)
+  .use(Popup)
+  .use(Button)
+  .use(Dialog)
+  .use(DropdownMenu)
+  .use(DropdownItem)
+>>>>>>> 710e7af81abec4a7b90516a3db144a5fad718f20
 export default {
-  data() {
+  data () {
     return {
       value: 0,
       switch1: false,
       switch2: false,
       option: [
-        { text: "推荐排序", value: 0 },
-        { text: "最新上架", value: 1 },
-        { text: "最新开场", value: 2 }
+        { text: '推荐排序', value: 0 },
+        { text: '最新上架', value: 1 },
+        { text: '最新开场', value: 2 }
       ]
     }
   },
   methods: {
-    fn1(a) {
-      this.$dialog.alert({ message: "请开启定位服务" })
+    fn1 (a) {
+      this.$dialog.alert({ message: '请开启定位服务' })
     }
   }
 }

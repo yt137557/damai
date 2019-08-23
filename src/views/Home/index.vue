@@ -3,7 +3,8 @@
     <!-- 首页的头部bar -->
     <div class="header">
       <router-link :to="'/city'" class="location">
-        <van-icon name="location" size="34px" />境外
+        <van-icon name="location" size="34px" />
+        {{isCity}}
       </router-link>
 
       <router-link :to="'/search'" tag="div" class="search">
@@ -20,9 +21,16 @@
 
 <script>
 import Content from './content'
+<<<<<<< HEAD
+=======
+import { mapState } from 'vuex'
+>>>>>>> 710e7af81abec4a7b90516a3db144a5fad718f20
 export default {
   components: {
     Content
+  },
+  computed: {
+    ...mapState('city', ['isCity'])
   }
 }
 </script>

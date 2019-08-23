@@ -1,4 +1,4 @@
-import request from "./../../utils/axios"
+import request from './../../utils/axios'
 export default {
   namespaced: true,
   state: {
@@ -11,7 +11,7 @@ export default {
   },
   mutations: {
     getBannerlist(state) {
-      request.get("http://localhost:3000/ydata").then(res => {
+      request.get('http://localhost:3000/ydata').then(res => {
         state.allInfo = []
         let temp = res.data
         state.posterPic = temp.bannerList[0].pic
