@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="chengshi">
     <p class="city-title">定位城市</p>
     <div class="address-box">
       <van-button type="default" class="city-address">定位失败</van-button>
@@ -35,33 +35,35 @@ body {
   font-size: 28px;
   color: #666;
 }
-.city-title {
-  height: 60px;
-  line-height: 60px;
-  background: #f2f3f4;
-  box-sizing: border-box;
-  padding-left: 24px;
-}
-.city-address {
-  color: #666;
-  height: 60px;
-  line-height: 60px;
-  width: 30%;
-  margin-bottom: 20px;
-  margin-left: 2.5%;
-}
-.address-box {
-  box-sizing: border-box;
-  padding: 20px;
-  padding-bottom: 0;
-  flex-wrap: wrap;
-}
-.address-box-2 {
-  height: 80px;
-  width: 100%;
-  line-height: 80px;
-  padding-left: 28px;
-  text-align: left;
-  border-top: none;
+.chengshi {
+  .city-title {
+    height: 60px;
+    line-height: 60px;
+    background: #f2f3f4;
+    box-sizing: border-box;
+    padding-left: 24px;
+  }
+  .city-address {
+    color: #666;
+    height: 60px;
+    line-height: 60px;
+    width: 30%;
+    margin-bottom: 20px;
+    margin-left: 2.5%;
+  }
+  .address-box {
+    box-sizing: border-box;
+    padding: 20px;
+    padding-bottom: 0;
+    flex-wrap: wrap;
+  }
+  .address-box-2 {
+    height: 80px;
+    width: 100%;
+    line-height: 80px;
+    padding-left: 28px;
+    text-align: left;
+    border-top: none;
+  }
 }
 </style>

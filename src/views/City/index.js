@@ -21,7 +21,7 @@ export default {
       request
         .get('http://localhost:3000/city')
         .then(res => {
-          this.getData(res.data.areas)
+          this.getData(res.data.data.areas)
         })
         .catch(err => {
           console.log(err)
@@ -30,7 +30,7 @@ export default {
     tijiao(eve) {
       this.getCity({ city: eve.target.innerText })
       console.log(this.isCity)
-      // router.push('/')
+      router.push('/')
     }
   },
   created() {
